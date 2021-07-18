@@ -1,8 +1,13 @@
 <template>
   <div>
+  <!--
     <div class="text-h4 q-mb-md">Configuration</div>
     <p>Configure API Keys and other stuff here.</p>
     <div class="text-h5">API Keys</div>
+    -->
+    <div v-if="!addApiToggle" @click.prevent="openAddApi" class="row q-pa-sm">
+      <q-btn color="primary" icon="add_circle_outline" label="Add API key"/>
+    </div>
     <div class="row">
       <div class="col">
         <q-list separator bordered class="q-my-md">
@@ -26,9 +31,6 @@
           </q-item>
         </q-list>
       </div>
-    </div>
-    <div v-if="!addApiToggle" @click.prevent="openAddApi" class="row q-pa-sm">
-      <q-btn color="primary" icon="add_circle_outline" label="Add API key"/>
     </div>
 
     <api-config-builder v-if="addApiToggle"></api-config-builder>

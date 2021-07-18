@@ -1,8 +1,14 @@
 <template>
   <div>
+  <!--
     <div class="q-mb-md">
       <div class="text-h4 q-mb-md">Live Gekkos</div>
       <div class="text-subtitle">Run your strategy against a live market!</div>
+    </div>
+ -->
+    <div>
+      <!-- <div class="text-h4 q-mb-sm">Start a new live Gekko</div> -->
+      <q-btn color="amber-8" @click.prevent="$router.push('/live-gekkos/new')">Start a new live Gekko!</q-btn>
     </div>
 
     <div class="q-mb-md">
@@ -137,10 +143,6 @@
           </q-td>
         </q-tr>
       </q-table>
-    </div>
-    <div>
-      <div class="text-h4 q-mb-sm">Start a new live Gekko</div>
-      <q-btn color="amber-8" @click.prevent="$router.push('/live-gekkos/new')">Start a new live Gekko!</q-btn>
     </div>
   </div>
 </template>

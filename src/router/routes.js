@@ -5,6 +5,8 @@ export default [
     component: () => import('layouts/default'),
     children: [
       { path: '', component: () => import('pages/index') },
+      { path: 'news', component: () => import('pages/news') },
+      
       { path: 'live-gekkos', component: () => import('pages/live-gekkos')},
       { path: 'live-gekkos/new', component: () => import('components/gekko/new')},
       { path: 'live-gekkos/:id', component: () => import('components/gekko/singleGekko')},

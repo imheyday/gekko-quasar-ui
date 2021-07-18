@@ -11,21 +11,24 @@
           <q-icon name="menu"/>
         </q-btn>
         <q-toolbar-title>
-          Gordon UI
+           CoinXTT<!-- Gordon UI -->
         </q-toolbar-title>
         <q-space></q-space>
         <q-tabs shrink stretch>
-          <q-route-tab icon="home" default label="Home" to="/" exact></q-route-tab>
-          <q-route-tab icon="cast_connected" label="Live Gekkos" to="/live-gekkos" exact>
+          <q-route-tab icon="home" default label="Home" to="/" exact></q-route-tab> 
+          <q-route-tab icon="feed" label="News" to="/news" exact></q-route-tab>
+          <q-route-tab icon="cast_connected" label="Live" to="/live-gekkos" exact>
             <q-badge color="green" floating v-if="stratrunners.length">{{stratrunners.length}}</q-badge>
-          </q-route-tab>
+          </q-route-tab> 
+          <!--
           <q-route-tab icon="timeline" label="Backtest" to="/backtest" exact></q-route-tab>
           <q-route-tab icon="storage" label="Data" to="/data" exact></q-route-tab>
           <q-route-tab icon="import_export" label="Importer" to="/data/importer" exact>
             <q-badge color="blue" floating v-if="activeImports > 0">{{activeImports}}</q-badge>
           </q-route-tab>
+          -->
           <q-route-tab icon="settings" label="Config" to="/config" exact></q-route-tab>
-          <q-route-tab icon="help" label="Documentation" to="/help"></q-route-tab>
+          <!-- <q-route-tab icon="help" label="Documentation" to="/help" ></q-route-tab> -->
         </q-tabs>
       </q-toolbar>
       <q-toolbar v-if="currentWatchers.length > 0" class="bg-blue-grey-8">
@@ -55,7 +58,9 @@
       content-class="bg-grey-2"
     >
       <q-list>
-        <q-item-label header>Essential Links</q-item-label>
+        <q-item-label header>Project Schedule</q-item-label>
+
+        <!--
         <q-item clickable @click.native="openURL('https://github.com/h256/gekko-quasar-ui')">
           <q-item-section side>
             <q-icon name="fab fa-github-square"></q-icon>
@@ -134,6 +139,7 @@
             <q-item-label caption>quasar-framework.org</q-item-label>
           </q-item-section>
         </q-item>
+        -->
       </q-list>
     </q-drawer>
 
@@ -142,6 +148,7 @@
     </q-page-container>
 
     <q-footer reveal>
+      <!--
       <q-toolbar class="bg-blue-grey-7">
         <div>
           <div class="text-h6">Gordon UI v {{version.ui}}</div>
@@ -157,6 +164,7 @@
           <div class="text-h6">Crypto-Icons by <a href="http://cryptoicons.co/">crypticons.co</a></div>
         </q-toolbar-title>
       </q-toolbar>
+        -->
     </q-footer>
   </q-layout>
 </template>
